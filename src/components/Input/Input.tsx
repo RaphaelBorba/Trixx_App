@@ -1,11 +1,11 @@
 import { KeyboardTypeOptions } from "react-native";
 import { Icon, InputBox, InputView, TextBox } from "./style";
 import { Feather } from "@expo/vector-icons";
-import { Dispatch } from "react";
+import { Dispatch, useState } from "react";
 
 interface InputProps {
 
-    type?: 'text' | 'password';
+    type?: 'email' | 'password';
     title: string;
     placeHolder: string;
     autoCapitalize: "none" | "sentences" | "words" | "characters" | undefined
@@ -20,10 +20,41 @@ interface InputProps {
     secureTextEntry: boolean
 
     setShowPassword?: any
+
+    regexValidation: any
+
+    value: string
+
+    setValue: any
 }
 
 
-export default function Input({setShowPassword, title, placeHolder, autoCapitalize, textContentType, keyboardType, secureTextEntry, type }: InputProps) {
+export default function Input({ 
+    value,
+    setValue,
+    regexValidation, 
+    setShowPassword, 
+    title, 
+    placeHolder, 
+    autoCapitalize, 
+    textContentType, 
+    keyboardType, 
+    secureTextEntry, 
+    type }: InputProps) {
+
+        const [validated, setValidated] = useState(true)
+
+        const handleOnChange = (value:string) =>{
+
+            setValue(value)
+
+            if(regexValidation.test(value) || value.length === 0){
+                
+                setValidated(true)
+            }else{
+                setValidated(false)
+            }
+        }
 
     return (
 
@@ -36,10 +67,15 @@ export default function Input({setShowPassword, title, placeHolder, autoCapitali
                 keyboardType={keyboardType}
                 secureTextEntry={secureTextEntry}
                 placeholder={placeHolder}
+                value={value}
+                onChangeText={handleOnChange}
+                validate={validated}
+                
+                
             />
             {
                 type === 'password' ?
-                    <Icon onPress={()=>setShowPassword(!secureTextEntry)}>
+                    <Icon onPress={() => setShowPassword(!secureTextEntry)}>
 
                         <Feather name="eye-off" size={24} color="#666666" />
                     </Icon>

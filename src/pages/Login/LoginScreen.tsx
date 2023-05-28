@@ -1,11 +1,16 @@
 import { Image } from "react-native";
 import { Form, MainView } from "./style";
 import Input from "../../components/Input/Input";
-import { useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 export default function LoginScreen() {
 
     const [showPassword, setShowPassword] = useState(true)
+    const [email, setEmail] = useState('')
+    const [password, SetPassword] = useState('')
+
+   
+
 
     return (
         <MainView>
@@ -19,6 +24,9 @@ export default function LoginScreen() {
                     keyboardType="email-address"
                     textContentType="emailAddress"
                     secureTextEntry={false}
+                    regexValidation={/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/}
+                    value = {email}
+                    setValue = {setEmail}
                 />
 
                 <Input
@@ -30,6 +38,9 @@ export default function LoginScreen() {
                     secureTextEntry={showPassword}
                     setShowPassword={setShowPassword}
                     type="password"
+                    regexValidation = {/^(?=.*[A-Z]).{6,}$/}
+                    value = {password}
+                    setValue = {SetPassword}
                 />
 
 

@@ -16,9 +16,9 @@ export const TextBox = styled.Text`
     color: #666666;
 `
 
-export const InputBox = styled.TextInput`
+export const InputBox = styled.TextInput<any>`
 
-    border: 1px solid #666666;
+    border: 1px solid ${props => props.validate ?'#666666' : 'red'} ;
     border-radius: 8px;
     height: 48px;
     padding-left: 15px;
