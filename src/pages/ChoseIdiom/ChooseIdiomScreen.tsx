@@ -12,6 +12,7 @@ export default function ChooseIdiomScreen({navigation}: any) {
                     <ImageIdiom source={require('../../../assets/portugal.png')} />
                     <ButtonText>Português</ButtonText>
                 </ButtonIdiom>
+                
                 <ButtonIdiom onPress={()=>navigation.navigate('Login')}>
                     <ImageIdiom source={require('../../../assets/reinoUnido.png')} />
                     <ButtonText>Inglês</ButtonText>
