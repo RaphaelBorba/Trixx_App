@@ -7,7 +7,7 @@ interface ButtonProps {
     color: '#E1B12C' | '#FFFDFF'
     onPressFunction: any;
     width: '328px' | '104px',
-    fontSize:'16px'| '12px'
+    fontSize:16| 12
 }
 
 export default function Button({ text, color, onPressFunction, width, fontSize }: ButtonProps){
@@ -15,7 +15,7 @@ export default function Button({ text, color, onPressFunction, width, fontSize }
     return (
 
         <ButtonStyle onPress={onPressFunction} width={width}  color={color} >
-            <ButtonText fontSize={fontSize} style={{fontFamily:'Poppins_400Regular'}} color={color}>{text}</ButtonText>
+            <ButtonText style={{fontFamily:'Poppins_400Regular', fontSize}} color={color}>{text}</ButtonText>
         </ButtonStyle>
     )
 }

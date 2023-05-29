@@ -109,7 +109,7 @@ export default function SignUpScreen({ navigation }: any) {
                     color="#E1B12C"
                     text="Criar Conta"
                     width="328px"
-                    fontSize="16px"
+                    fontSize={16}
                     onPressFunction={validateSignUp}
                 />
 

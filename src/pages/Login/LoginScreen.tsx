@@ -66,14 +66,14 @@ export default function LoginScreen({ navigation }: any) {
                 <ButtonView>
 
                     <Button
-                        fontSize="16px"
+                        fontSize={16}
                         text="Entrar"
                         color="#E1B12C"
                         onPressFunction={validateLogin}
                         width='328px'
                     />
                     <Button
-                        fontSize="16px"
+                        fontSize={16}
                         text="Criar Conta"
                         color="#FFFDFF"
                         onPressFunction={() => navigation.navigate('Sign Up')}

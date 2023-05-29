@@ -12,7 +12,7 @@ export default function Map() {
             <Image style={{ width: '100%' }} source={require('../../../assets/map.png')} />
             <ButtonView>
                 <Button
-                    fontSize="12px"
+                    fontSize={12}
                     color="#E1B12C"
                     onPressFunction={() => { return }}
                     text="Ativar o GPS"
