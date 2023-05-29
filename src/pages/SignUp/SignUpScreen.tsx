@@ -112,7 +112,10 @@ export default function SignUpScreen({ navigation }: any) {
                     onPressFunction={validateSignUp}
                 />
 
-                {
+                
+            </MainView >
+
+            {
                     popout
                     ?
                     <Popout 
@@ -121,7 +124,6 @@ export default function SignUpScreen({ navigation }: any) {
                     />
                     :''
                 }
-            </MainView >
         </KeyboardAwareScrollView>
 
     )

@@ -1,15 +1,15 @@
 import styled from "styled-components/native"
 
 
-export const PopoutView = styled.View`
+export const PopoutView = styled.View<any>`
 
     width: 100%;
-    height: 123%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
     background-color: rgba(0,0,0, 0.3);
-    z-index: 2;
+    z-index: 5;
     display: flex;
     justify-content: center;
     align-items: center;

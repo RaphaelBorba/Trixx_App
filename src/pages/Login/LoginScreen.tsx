@@ -24,7 +24,7 @@ export default function LoginScreen({ navigation }: any) {
 
 
     return (
-        <KeyboardAwareScrollView>
+        <KeyboardAwareScrollView style={{height:853}} >
         <MainView>
             <Image source={require('../../../assets/yellowHand.png')} />
 
@@ -81,7 +81,10 @@ export default function LoginScreen({ navigation }: any) {
             </ButtonView>
 
 
-            {
+            
+
+        </MainView>
+        {
                 popout
                     ?
                     <Popout
@@ -91,8 +94,6 @@ export default function LoginScreen({ navigation }: any) {
                     :
                     ''
             }
-
-        </MainView>
         </KeyboardAwareScrollView>
     )
 }

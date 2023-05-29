@@ -1,4 +1,4 @@
-import { Text } from "react-native";
+import { Dimensions, Text } from "react-native";
 import { PopoutBox, PopoutText, PopoutView } from "./style";
 import Button from "../Button/Button";
 
@@ -11,7 +11,7 @@ interface PopoutProps {
 export default function Popout({ setPopout, page }: PopoutProps) {
 
     return (
-        <PopoutView>
+        <PopoutView >
 
             <PopoutBox>
 
