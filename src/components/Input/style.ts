@@ -6,7 +6,6 @@ export const InputView = styled.View`
     width: 328px;
     margin-inline: auto;
     display: flex;
-    gap: 10px;
     position: relative;
 `
 
@@ -14,6 +13,7 @@ export const TextBox = styled.Text`
 
     font-size: 16px;
     color: #666666;
+    padding-bottom: 10px;
 `
 
 export const InputBox = styled.TextInput<any>`

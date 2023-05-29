@@ -18,7 +18,7 @@ export const PopoutView = styled.View`
 export const PopoutBox = styled.View`
 
     width: 80%;
-    height: 300px;
+    min-height: 300px;
     border-radius: 8px;
     background-color: #fff;
     display: flex;

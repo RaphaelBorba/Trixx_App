@@ -3,6 +3,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack'
 import LoginScreen from './pages/Login/LoginScreen';
 import ChooseIdiomScreen from './pages/ChoseIdiom/ChooseIdiomScreen';
 import HomeScreen from './pages/Home/HomeScreen';
+import SignUpScreen from './pages/SignUp/SignUpScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,6 +13,7 @@ export default function App() {
       <Stack.Navigator initialRouteName="Choose Idiom" screenOptions={{ headerShown:false}}>
         <Stack.Screen name='Choose Idiom' component={ChooseIdiomScreen} />
         <Stack.Screen name='Login' component={LoginScreen} />
+        <Stack.Screen name='Sign Up' component={SignUpScreen} />
         <Stack.Screen name='Home' component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>

@@ -4,6 +4,7 @@ import Input from "../../components/Input/Input";
 import { useState } from "react";
 import Button from "../../components/Button/Button";
 import Popout from "../../components/Popout/Popout";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
 
 export default function LoginScreen({ navigation }: any) {
 
@@ -17,12 +18,13 @@ export default function LoginScreen({ navigation }: any) {
     const validateLogin = () => {
 
         if (regexEmail.test(email) && regexPassword.test(password)) navigation.navigate('Home')
-        
+
         else setPopout(true)
     }
 
 
     return (
+        <KeyboardAwareScrollView>
         <MainView>
             <Image source={require('../../../assets/yellowHand.png')} />
 
@@ -72,7 +74,7 @@ export default function LoginScreen({ navigation }: any) {
                 <Button
                     text="Criar Conta"
                     color="#FFFDFF"
-                    onPressFunction={() => { return }}
+                    onPressFunction={() => navigation.navigate('Sign Up')}
                     width='328px'
                 />
 
@@ -83,6 +85,7 @@ export default function LoginScreen({ navigation }: any) {
                 popout
                     ?
                     <Popout
+                        page="Login"
                         setPopout={setPopout}
                     />
                     :
@@ -90,5 +93,6 @@ export default function LoginScreen({ navigation }: any) {
             }
 
         </MainView>
+        </KeyboardAwareScrollView>
     )
 }
