@@ -25,7 +25,7 @@ export default function SignUpScreen({ navigation }: any) {
 
         if (regexName.test(name) && regexEmail.test(email) && regexNumber.test(number) && regexPassword.test(password) && password === confirmPassword) {
             navigation.navigate('Home')
-        }else{
+        } else {
             setPopout(true)
         }
     }
@@ -109,21 +109,22 @@ export default function SignUpScreen({ navigation }: any) {
                     color="#E1B12C"
                     text="Criar Conta"
                     width="328px"
+                    fontSize="16px"
                     onPressFunction={validateSignUp}
                 />
 
-                
+
             </MainView >
 
             {
-                    popout
+                popout
                     ?
-                    <Popout 
-                    page="Sign Up"
-                    setPopout={setPopout}
+                    <Popout
+                        page="Sign Up"
+                        setPopout={setPopout}
                     />
-                    :''
-                }
+                    : ''
+            }
         </KeyboardAwareScrollView>
 
     )

@@ -20,7 +20,7 @@ export const ButtonText = styled.Text<any>`
 
     color: ${props => props.color === '#E1B12C' ? '#FFFDFF' : '#666666'};
     font-weight: 400;
-    font-size: 16px;
+    font-size: ${props => props.fontSize};
     line-height: 24px;
 
 `

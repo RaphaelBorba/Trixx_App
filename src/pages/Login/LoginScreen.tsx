@@ -24,67 +24,69 @@ export default function LoginScreen({ navigation }: any) {
 
 
     return (
-        <KeyboardAwareScrollView style={{height:853}} >
-        <MainView>
-            <Image source={require('../../../assets/yellowHand.png')} />
+        <KeyboardAwareScrollView style={{ height: 853 }} >
+            <MainView>
+                <Image source={require('../../../assets/yellowHand.png')} />
 
-            <Form>
-                <Input
-                    title="E-mail"
-                    placeHolder="e-mail"
-                    autoCapitalize="none"
-                    keyboardType="email-address"
-                    textContentType="emailAddress"
-                    secureTextEntry={false}
-                    regexValidation={regexEmail}
-                    value={email}
-                    setValue={setEmail}
-                />
+                <Form>
+                    <Input
+                        title="E-mail"
+                        placeHolder="e-mail"
+                        autoCapitalize="none"
+                        keyboardType="email-address"
+                        textContentType="emailAddress"
+                        secureTextEntry={false}
+                        regexValidation={regexEmail}
+                        value={email}
+                        setValue={setEmail}
+                    />
 
-                <Input
-                    title="Senha"
-                    placeHolder="senha"
-                    autoCapitalize="none"
-                    keyboardType="default"
-                    textContentType="password"
-                    secureTextEntry={showPassword}
-                    setShowPassword={setShowPassword}
-                    type="password"
-                    regexValidation={regexPassword}
-                    value={password}
-                    setValue={SetPassword}
-                />
-
-
-            </Form>
-
-            <ForgetPasswordView>
-                <Text style={{fontFamily:'Poppins_400Regular'}}>Esqueceu sua senha ? </Text>
-                <ForgetPassword style={{fontFamily:'Poppins_400Regular'}}>Clique aqui!</ForgetPassword>
-            </ForgetPasswordView>
-
-            <ButtonView>
-
-                <Button
-                    text="Entrar"
-                    color="#E1B12C"
-                    onPressFunction={validateLogin}
-                    width='328px'
-                />
-                <Button
-                    text="Criar Conta"
-                    color="#FFFDFF"
-                    onPressFunction={() => navigation.navigate('Sign Up')}
-                    width='328px'
-                />
-
-            </ButtonView>
+                    <Input
+                        title="Senha"
+                        placeHolder="senha"
+                        autoCapitalize="none"
+                        keyboardType="default"
+                        textContentType="password"
+                        secureTextEntry={showPassword}
+                        setShowPassword={setShowPassword}
+                        type="password"
+                        regexValidation={regexPassword}
+                        value={password}
+                        setValue={SetPassword}
+                    />
 
 
-            
+                </Form>
 
-        </MainView>
-        {
+                <ForgetPasswordView>
+                    <Text style={{ fontFamily: 'Poppins_400Regular' }}>Esqueceu sua senha ? </Text>
+                    <ForgetPassword style={{ fontFamily: 'Poppins_400Regular' }}>Clique aqui!</ForgetPassword>
+                </ForgetPasswordView>
+
+                <ButtonView>
+
+                    <Button
+                        fontSize="16px"
+                        text="Entrar"
+                        color="#E1B12C"
+                        onPressFunction={validateLogin}
+                        width='328px'
+                    />
+                    <Button
+                        fontSize="16px"
+                        text="Criar Conta"
+                        color="#FFFDFF"
+                        onPressFunction={() => navigation.navigate('Sign Up')}
+                        width='328px'
+                    />
+
+                </ButtonView>
+
+
+
+
+            </MainView>
+            {
                 popout
                     ?
                     <Popout
