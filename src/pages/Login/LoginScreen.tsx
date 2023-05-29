@@ -1,7 +1,8 @@
-import { Image } from "react-native";
-import { Form, MainView } from "./style";
+import { Image, Text } from "react-native";
+import { ButtonView, ForgetPassword, ForgetPasswordView, Form, MainView } from "./style";
 import Input from "../../components/Input/Input";
 import { ChangeEvent, useState } from "react";
+import Button from "../../components/Button/Button";
 
 export default function LoginScreen() {
 
@@ -9,7 +10,7 @@ export default function LoginScreen() {
     const [email, setEmail] = useState('')
     const [password, SetPassword] = useState('')
 
-   
+
 
 
     return (
@@ -25,8 +26,8 @@ export default function LoginScreen() {
                     textContentType="emailAddress"
                     secureTextEntry={false}
                     regexValidation={/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/}
-                    value = {email}
-                    setValue = {setEmail}
+                    value={email}
+                    setValue={setEmail}
                 />
 
                 <Input
@@ -38,14 +39,31 @@ export default function LoginScreen() {
                     secureTextEntry={showPassword}
                     setShowPassword={setShowPassword}
                     type="password"
-                    regexValidation = {/^(?=.*[A-Z]).{6,}$/}
-                    value = {password}
-                    setValue = {SetPassword}
+                    regexValidation={/^(?=.*[A-Z]).{6,}$/}
+                    value={password}
+                    setValue={SetPassword}
                 />
 
 
             </Form>
 
+            <ForgetPasswordView>
+                <Text>Esqueceu sua senha ? </Text>
+                <ForgetPassword>Clique aqui!</ForgetPassword>
+            </ForgetPasswordView>
+
+            <ButtonView>
+
+                <Button
+                    text="Entrar"
+                    color="#E1B12C"
+                />
+                <Button
+                    text="Criar Conta"
+                    color="#FFFDFF"
+                />
+
+            </ButtonView>
 
         </MainView>
     )

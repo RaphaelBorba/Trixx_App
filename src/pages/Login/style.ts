@@ -21,3 +21,27 @@ export const Form = styled.View`
     gap: 22px;
 
 `
+
+export const ForgetPasswordView = styled.View`
+
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    font-size: 13px;
+    color: #231F20;    
+`
+
+export const ForgetPassword = styled.Text`
+
+    color: #E1B12C;
+    text-decoration: underline;
+`
+
+export const ButtonView = styled.View`
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 80px;
+
+`
