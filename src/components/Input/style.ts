@@ -3,7 +3,7 @@ import styled from "styled-components/native";
 
 export const InputView = styled.View`
 
-    width: 90%;
+    width: 328px;
     margin-inline: auto;
     display: flex;
     gap: 10px;
@@ -19,6 +19,7 @@ export const TextBox = styled.Text`
 export const InputBox = styled.TextInput<any>`
 
     border: 1px solid ${props => props.validate ?'#666666' : 'red'} ;
+    width: 100%;
     border-radius: 8px;
     height: 48px;
     padding-left: 15px;

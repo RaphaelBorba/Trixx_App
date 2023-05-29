@@ -26,7 +26,7 @@ export const ForgetPasswordView = styled.View`
 
     display: flex;
     flex-direction: row;
-    width: 90%;
+    width: 328px;
     font-size: 13px;
     color: #231F20;    
 `
