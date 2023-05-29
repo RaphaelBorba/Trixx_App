@@ -59,7 +59,7 @@ export default function Input({
     return (
 
         <InputView>
-            <TextBox>{title}</TextBox>
+            <TextBox style={{fontFamily:'Poppins_400Regular'}}>{title}</TextBox>
 
             <InputBox
                 autoCapitalize={autoCapitalize}

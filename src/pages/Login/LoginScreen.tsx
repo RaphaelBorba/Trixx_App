@@ -59,8 +59,8 @@ export default function LoginScreen({ navigation }: any) {
             </Form>
 
             <ForgetPasswordView>
-                <Text>Esqueceu sua senha ? </Text>
-                <ForgetPassword>Clique aqui!</ForgetPassword>
+                <Text style={{fontFamily:'Poppins_400Regular'}}>Esqueceu sua senha ? </Text>
+                <ForgetPassword style={{fontFamily:'Poppins_400Regular'}}>Clique aqui!</ForgetPassword>
             </ForgetPasswordView>
 
             <ButtonView>

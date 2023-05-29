@@ -18,29 +18,29 @@ export default function Popout({ setPopout, page }: PopoutProps) {
                 {
                     page === 'Login' ?
                         <>
-                            <PopoutText>
+                            <PopoutText style={{fontFamily:'Poppins_400Regular'}}>
                                 - E-mail precisa estar no formato de e-mail
                             </PopoutText>
 
-                            <PopoutText >
+                            <PopoutText style={{fontFamily:'Poppins_400Regular'}}>
                                 - Senha precisa ter no mínimo 6 caracteres e um precisa ser letra maiúscula!
-                            </PopoutText>
+                            </PopoutText >
                         </>
                         :
                         <>
-                            <PopoutText>
+                            <PopoutText style={{fontFamily:'Poppins_400Regular'}}>
                                 - Nome precisa ter no mínimo 3 letras
                             </PopoutText>
 
-                            <PopoutText>
+                            <PopoutText style={{fontFamily:'Poppins_400Regular'}}>
                                 - E-mail precisa estar no formato de e-mail
                             </PopoutText>
                             
-                            <PopoutText>
+                            <PopoutText style={{fontFamily:'Poppins_400Regular'}}>
                                 - Número precisa ter 11 números
                             </PopoutText>
 
-                            <PopoutText >
+                            <PopoutText style={{fontFamily:'Poppins_400Regular'}}>
                                 - Senha precisa ter no mínimo 6 caracteres e um precisa ser letra maiúscula!
                             </PopoutText>
                         </>

@@ -1,8 +1,7 @@
-import { TouchableHighlight, View } from "react-native";
 import { ButtonIdiom, ButtonText, ImageIdiom, MainView } from "./style";
 
 
-export default function ChooseIdiomScreen({navigation}: any) {
+export default function ChooseIdiomScreen({navigation, route}: any) {
 
     return (
 
@@ -10,12 +9,12 @@ export default function ChooseIdiomScreen({navigation}: any) {
 
                 <ButtonIdiom onPress={()=>navigation.navigate('Login')} >
                     <ImageIdiom source={require('../../../assets/portugal.png')} />
-                    <ButtonText>Português</ButtonText>
+                    <ButtonText style={{fontFamily:'Poppins_600SemiBold'}}>Português</ButtonText>
                 </ButtonIdiom>
                 
                 <ButtonIdiom onPress={()=>navigation.navigate('Login')}>
                     <ImageIdiom source={require('../../../assets/reinoUnido.png')} />
-                    <ButtonText>Inglês</ButtonText>
+                    <ButtonText style={{fontFamily:'Poppins_600SemiBold'}}>Inglês</ButtonText>
                 </ButtonIdiom>
 
         </MainView>

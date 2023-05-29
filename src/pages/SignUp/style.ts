@@ -8,7 +8,7 @@ export const MainView = styled.View`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 70px 0;
+    padding: 50px 0 15px 0;
 `
 
 export const Form = styled.View`

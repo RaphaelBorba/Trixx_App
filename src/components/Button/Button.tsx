@@ -14,7 +14,7 @@ export default function Button({ text, color, onPressFunction, width }: ButtonPr
     return (
 
         <ButtonStyle onPress={onPressFunction} width={width}  color={color} >
-            <ButtonText color={color}>{text}</ButtonText>
+            <ButtonText style={{fontFamily:'Poppins_400Regular'}} color={color}>{text}</ButtonText>
         </ButtonStyle>
     )
 }

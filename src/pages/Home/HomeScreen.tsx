@@ -1,10 +1,13 @@
 import { Text } from "react-native";
+import { MainView } from "./style";
 
 
 export default function HomeScreen(){
 
     return (
 
-        <Text>Home</Text>
+        <MainView>
+            <Text>asdasdqw</Text>
+        </MainView>
     )
 }

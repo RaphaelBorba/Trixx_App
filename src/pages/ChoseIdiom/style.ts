@@ -10,7 +10,6 @@ export const MainView = styled.View`
     justify-content: center;
     align-items: center;
     gap: 40px;
-    background-color: #F8F8F8;
 
 `
 export const ButtonIdiom = styled.TouchableOpacity`

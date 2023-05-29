@@ -2,7 +2,6 @@ import styled from "styled-components/native";
 
 
 export const MainView = styled.View`
-
     width: 100%;
     height: 100%;
     display: flex;
@@ -28,7 +27,8 @@ export const ForgetPasswordView = styled.View`
     flex-direction: row;
     width: 328px;
     font-size: 13px;
-    color: #231F20;    
+    color: #231F20;
+    margin-top: 10px;
 `
 
 export const ForgetPassword = styled.Text`

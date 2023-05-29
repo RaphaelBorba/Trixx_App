@@ -19,6 +19,7 @@ export const TextBox = styled.Text`
 export const InputBox = styled.TextInput<any>`
 
     border: 1px solid ${props => props.validate ?'#666666' : 'red'} ;
+    font-family:'Poppins_400Regular';
     width: 100%;
     border-radius: 8px;
     height: 48px;
@@ -30,7 +31,7 @@ export const InputBox = styled.TextInput<any>`
 export const Icon = styled.TouchableHighlight`
 
     position: absolute;
-    top: 50%;
+    top: 53px;
     right: 20px;
     z-index: 1;
 
