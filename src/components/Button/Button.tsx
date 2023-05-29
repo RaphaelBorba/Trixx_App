@@ -5,13 +5,15 @@ interface ButtonProps {
 
     text: string
     color: '#E1B12C' | '#FFFDFF'
+    onPressFunction: any;
+    width: '328px' | '104px'
 }
 
-export default function Button({ text, color }: ButtonProps){
+export default function Button({ text, color, onPressFunction, width }: ButtonProps){
 
     return (
 
-        <ButtonStyle color={color}>
+        <ButtonStyle onPress={onPressFunction} width={width}  color={color} >
             <ButtonText color={color}>{text}</ButtonText>
         </ButtonStyle>
     )
