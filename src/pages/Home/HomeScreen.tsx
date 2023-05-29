@@ -1,5 +1,5 @@
-import { Text } from "react-native";
 import { MainView } from "./style";
+import Header from "../../components/Header/Header";
 
 
 export default function HomeScreen(){
@@ -7,7 +7,7 @@ export default function HomeScreen(){
     return (
 
         <MainView>
-            <Text>asdasdqw</Text>
+            <Header/>
         </MainView>
     )
 }

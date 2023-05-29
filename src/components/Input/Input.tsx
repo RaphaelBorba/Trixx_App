@@ -1,7 +1,7 @@
 import { KeyboardTypeOptions } from "react-native";
 import { Icon, InputBox, InputView, TextBox } from "./style";
 import { Feather } from "@expo/vector-icons";
-import { Dispatch, useState } from "react";
+import { useState } from "react";
 
 interface InputProps {
 
